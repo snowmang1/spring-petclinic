@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh './mvnw package'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo './mvnw test'
             }
         }
         stage('Deploy') {
